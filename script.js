@@ -96,30 +96,103 @@
 // sonlar.shift();
 // console.log(sonlar);
 
-let mevalar = ["Olma", "Banan", "Uzum"];
-mevalar.push("Anor", "Nok");
-console.log(mevalar);
+// let mevalar = ["Olma", "Banan", "Uzum"];
+// mevalar.push("Anor", "Nok");
+// console.log(mevalar);
 
-let sonlar = [10, 20, 30, 40, 50];
-sonlar.pop();
-console.log(sonlar);
+// let sonlar = [10, 20, 30, 40, 50];
+// sonlar.pop();
+// console.log(sonlar);
 
-let numbers = [5, 12, 8, 17, 4, 21, 16, 9];
-for(let a = 0; a < numbers.length; a++ ) {
-    if (numbers [a] % 2 === 0) {
-        console.log(numbers[a])
-    }
-}
+// let numbers = [5, 12, 8, 17, 4, 21, 16, 9];
+// for(let a = 0; a < numbers.length; a++ ) {
+//     if (numbers [a] % 2 === 0) {
+//         console.log(numbers[a])
+//     }
+// }
 
-let arr1 = [3, -5, 8, -2, 0, -9, 4, -1];
+// let arr1 = [3, -5, 8, -2, 0, -9, 4, -1];
 
-let b = 0;
-for (let c = 0; c < arr1.length; c++){
-    if (arr1[c] < 0){
-        b++;
-    }
-}
-console.log(b);
+// let b = 0;
+// for (let c = 0; c < arr1.length; c++){
+//     if (arr1[c] < 0){
+//         b++;
+//     }
+// }
+// console.log(b);
+ 
+
+// let texnologiyalar = ['HTML' , 'JavaScript' , 'Python' , 'Java' , 'CSS' , 'React'];
+
+// let til = texnologiyalar.slice(1,4);
+// console.log(til);
+
+
+// let fanlar = ['Ona tili' , 'Matematike' , 'Tarix' , 'English'];
+
+// let dars = fanlar.splice(1, "Informatika" , "Fazika");
+// console.log(dars);
+
+// // let Ranglar = ['Qizil', 'Yashil' , 'Kok' , 'sariq' , 'oq' , 'Olma' , 'Shaftoli'];
+
+// let cars = ['Cobalt' , 'Centra' , 'Damas', 'Spark', 'Olama', 'Banan' ];
+
+// let lishni = cars.slice(-1);
+// console.log(lishni);
+
+// let nmadur = cars.splice(4 , 'Tarvuz' , 'Qovun');
+// console.log(nmadur);
+
+
+// let mavallar = ['HTML' , 'CSS' , "Javascript", 'Python', 'Java'];
+
+// let juma = mavallar.slice(2, 'TypeScript');
+// console.log(juma);
+
+
+// let Ballar = [75,85,90,60,95];
+
+// let balli = Ballar.filter(son => son > 80);
+// console.log(Ballar);
+
+
+let prices = [150,80,200,50,120];
+
+let kam = prices.find(son => son < 100);
+console.log(kam);
+
+
+let scores = [70,85,90,95,80];
+
+let ball = scores.find(son => son > 90);
+console.log(ball);
+
+
+let shaharlar = ["Toshkent", "Samarqand", "Buxoro", "Xiva", "Namangan", "Andijon"];
+
+let last = shaharlar.slice(-3);
+console.log(last);
+
+
+let fanlar = ["Ingliz tili", "Tarix", "Matematika", "Fizika", "Kimyo"];
+
+let = fanlar.splice(2,2,'Dasturlash tili');
+console.log(fanlar);
+
+
+let fruits = ["olma", "banan", "apelsin", "shaftoli"];
+
+fruits.forEach((fruit, from, payme) => {
+  payme[from] = fruit[0].toUpperCase() + fruit.slice(1);
+});
+
+console.log(fruits);
+
+
+
+
+
+
 
 
 
