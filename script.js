@@ -156,37 +156,88 @@
 // console.log(Ballar);
 
 
-let prices = [150,80,200,50,120];
+// let prices = [150,80,200,50,120];
 
-let kam = prices.find(son => son < 100);
-console.log(kam);
-
-
-let scores = [70,85,90,95,80];
-
-let ball = scores.find(son => son > 90);
-console.log(ball);
+// let kam = prices.find(son => son < 100);
+// console.log(kam);
 
 
-let shaharlar = ["Toshkent", "Samarqand", "Buxoro", "Xiva", "Namangan", "Andijon"];
+// let scores = [70,85,90,95,80];
 
-let last = shaharlar.slice(-3);
-console.log(last);
-
-
-let fanlar = ["Ingliz tili", "Tarix", "Matematika", "Fizika", "Kimyo"];
-
-let = fanlar.splice(2,2,'Dasturlash tili');
-console.log(fanlar);
+// let ball = scores.find(son => son > 90);
+// console.log(ball);
 
 
-let fruits = ["olma", "banan", "apelsin", "shaftoli"];
+// let shaharlar = ["Toshkent", "Samarqand", "Buxoro", "Xiva", "Namangan", "Andijon"];
 
-fruits.forEach((fruit, from, payme) => {
-  payme[from] = fruit[0].toUpperCase() + fruit.slice(1);
-});
+// let last = shaharlar.slice(-3);
+// console.log(last);
 
-console.log(fruits);
+
+// let fanlar = ["Ingliz tili", "Tarix", "Matematika", "Fizika", "Kimyo"];
+
+// let = fanlar.splice(2,2,'Dasturlash tili');
+// console.log(fanlar);
+
+
+// let fruits = ["olma", "banan", "apelsin", "shaftoli"];
+
+// fruits.forEach((fruit, from, payme) => {
+//   payme[from] = fruit[0].toUpperCase() + fruit.slice(1);
+// });
+
+// console.log(fruits);
+
+// const car = {}
+
+
+let talaba4 = {
+    ism: "Madina" ,
+    fakultet: "Informatika" ,
+    shahar: "Samarqand" ,
+    yil: 2
+};
+delete talaba4.shahar;
+
+console.log(talaba4);
+
+let person = {
+    ism: "Karim" ,
+    yosh: 30 ,
+    greet: function () {
+        console.log("Salom mening ismim:" +  this.ism);
+    }
+};
+person.greet();
+
+let kitob = {
+    nomi: "JavaScript Dasturlash",
+    muallif: "Saidjon",
+    yil:2020
+};
+let yangiKitob = {kitob};
+yangiKitob.nomi = "PHP,PYTHON,JAVA";
+console.log(yangiKitob);
+
+
+let talabalar = [
+    {ism: "Ali" , ball:75},
+    {ism: "Vali" , ball:85},
+    {ism: "Guli", ball:90},
+    {ism: "Olim", ball: 60}
+];
+let balliKotalar = talabalar.filter( talaba => talaba.ball > 80);
+console.log(balliKotalar);
+
+let mahsulotlar = [
+    {id: 1, nomi: "Telefon" , narxi:3000000},
+    {id:2, nomi:"Laptop" , narxi:8000000},
+    {id:3, nomi:"tablaet" , narxi:2500000}
+];
+let idsiUch = mahsulotlar.find (mahsulot => mahsulot.id === 3);
+console.log( idsiUch.narxi);
+
+
 
 
 
