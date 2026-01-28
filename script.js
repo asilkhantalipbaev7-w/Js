@@ -191,68 +191,126 @@
 // const car = {}
 
 
-let talaba4 = {
-    ism: "Madina" ,
-    fakultet: "Informatika" ,
-    shahar: "Samarqand" ,
-    yil: 2
+// let talaba4 = {
+//     ism: "Madina" ,
+//     fakultet: "Informatika" ,
+//     shahar: "Samarqand" ,
+//     yil: 2
+// };
+// delete talaba4.shahar;
+
+// console.log(talaba4);
+
+// let person = {
+//     ism: "Karim" ,
+//     yosh: 30 ,
+//     greet: function () {
+//         console.log("Salom mening ismim:" +  this.ism);
+//     }
+// };
+// person.greet();
+
+// let kitob = {
+//     nomi: "JavaScript Dasturlash",
+//     muallif: "Saidjon",
+//     yil:2020
+// };
+// let yangiKitob = {kitob};
+// yangiKitob.nomi = "PHP,PYTHON,JAVA";
+// console.log(yangiKitob);
+
+
+// let talabalar = [
+//     {ism: "Ali" , ball:75},
+//     {ism: "Vali" , ball:85},
+//     {ism: "Guli", ball:90},
+//     {ism: "Olim", ball: 60}
+// ];
+// let balliKotalar = talabalar.filter( talaba => talaba.ball > 80);
+// console.log(balliKotalar);
+
+// let mahsulotlar = [
+//     {id: 1, nomi: "Telefon" , narxi:3000000},
+//     {id:2, nomi:"Laptop" , narxi:8000000},
+//     {id:3, nomi:"tablaet" , narxi:2500000}
+// ];
+// let idsiUch = mahsulotlar.find (mahsulot => mahsulot.id === 3);
+// console.log( idsiUch.narxi);
+
+alert('Sinf ishi');
+// let languages = ["JavaScript" , "Python" , "Java" , "C++"];
+
+// let [nolinchi,birinchi,ikinchi,uchinchi] = languages;
+// console.log(nolinchi);
+// console.log(birinchi);
+// console.log(ikinchi);
+// console.log(uchinchi);
+
+
+
+// let product = {
+//     nomi: "Smartphone" ,
+//     narxi: 500 ,
+//     rangi: "Qora"
+// };
+// let {nomi , narxi , rangi , kategory = "Boshqa"} = product;
+
+// console.log(nomi);
+// console.log(narxi);
+// console.log(rangi);
+// console.log(kategory);
+
+
+// let foydalanuvchi = {
+//     id: 1,
+//     ism:"Jasur" ,  
+//     manzil:{
+//      shahar:"Buxoro",
+//      tuman:"Kogon",
+//      kocha:"Navoyi"
+//     },
+//     kontakt: {
+//         telefon:"+998998887765",
+//         emeil: "jasuriniguzini@gmail.com"
+//     }
+// };
+// let {manzil:{shahar, tuman } , kontakt:{telefon,emeil}} = foydalanuvchi;
+// console.log(shahar);
+// console.log(tuman);
+// console.log(telefon);
+// console.log(emeil);
+
+
+
+const a = [1,2,3];
+const b = [4,5,6];
+const c = [7,8,9];
+
+const one = [0, ...a, ...b, ...c , 100];
+console.log(one);
+
+const mahsulot = {
+    nomi: "Laptop" ,
+    narxi: 50000000 , 
+    rangi: "Kumush"
 };
-delete talaba4.shahar;
 
-console.log(talaba4);
+const  {narxi, ...others } = mahsulot;
+const obj = {
+    ...others ,
+    narxi: narxi * 0.2 ,
+    chegirma: true
+};
+console.log(obj);
 
-let person = {
-    ism: "Karim" ,
-    yosh: 30 ,
-    greet: function () {
-        console.log("Salom mening ismim:" +  this.ism);
+function kopaytma( ...numbers) {
+    let natija = 1;
+
+    for ( let number of numbers ) {
+        natija *=  number ;
     }
+    return natija;
 };
-person.greet();
-
-let kitob = {
-    nomi: "JavaScript Dasturlash",
-    muallif: "Saidjon",
-    yil:2020
-};
-let yangiKitob = {kitob};
-yangiKitob.nomi = "PHP,PYTHON,JAVA";
-console.log(yangiKitob);
-
-
-let talabalar = [
-    {ism: "Ali" , ball:75},
-    {ism: "Vali" , ball:85},
-    {ism: "Guli", ball:90},
-    {ism: "Olim", ball: 60}
-];
-let balliKotalar = talabalar.filter( talaba => talaba.ball > 80);
-console.log(balliKotalar);
-
-let mahsulotlar = [
-    {id: 1, nomi: "Telefon" , narxi:3000000},
-    {id:2, nomi:"Laptop" , narxi:8000000},
-    {id:3, nomi:"tablaet" , narxi:2500000}
-];
-let idsiUch = mahsulotlar.find (mahsulot => mahsulot.id === 3);
-console.log( idsiUch.narxi);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(kopaytma(2,3,4));
+console.log(kopaytma(5,5));
+console.log(kopaytma(1,2,3,4));
