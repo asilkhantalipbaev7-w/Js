@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/script2.js"></script>
+
+
 </head>
 <body>
+    <div>
+    <h1 id="sarlavha">Eski sarlavha</h1>
+    </div>
+
+    <p class="matn">Yana bir paragraf.</p>
+    <p class="matn">Bu ochiriladigan paragraf.</p>
+    <p class="matn">Va yana bir paragraf.</p>
+
+
+    <button id="myButton">Meni bosing</button>
+    <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const sarlavha = document.getElementById("sarlavha");
+        sarlavha.innerText = "Yangi sarlavha";
+    });
+
+    const Yangirasm = document.createElement("img")
+    Yangirasm.src = "https://www.bing.com/th/id/OIP.XQ6CyncXgEdljRssh_LAIwHaEK?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2";
+    Yangirasm.alt = "Bu yangi rasm"
+    document.body.appendChild(Yangirasm); 
     
+
+
+    const ochiriladiganParagraf = document.querySelectorAll(".matn")[1];
+    ochiriladiganParagraf.remove(1);
+    
+    const Bosildi = document.getElementById("myButton");
+    Bosildi.addEventListener("click", function() {
+        alert("Tugma bosildi!");
+    });
+
+</script>
+</script>
 </body>
 </html>
