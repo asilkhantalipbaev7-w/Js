@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1{
+            color: rgba(16, 2, 2, 0.938);
+        }
+        .div-1{
+            background-color: green;
+            width: 200px;
+            height: 70px;
+            border-radius: 12px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            
+        }
+    .btn-1{
+      
+        width: 200px;
+        height: 70px;
+       position: relative;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50% , -50%);
+       background-color: green;
+    }
+    .container{
+        
+        max-width: 1200px;
+         margin: 0 auto;
+         background-color: rgb(21, 77, 200);
+    }
+    .div-th{
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        margin: 100px;
+    }
+    .div-3{
+        width: 200px;
+        height:150px;
+        background-color: rgb(189, 212, 36);
+    }
+   
+    </style>
+</head>
+<body>
+ <section class="container">
+    <div class="div-th">
+    <h1 class="h1">
+        MINIMUM
+    </h1>
+    <div class="div-1">
+      1
+    </div>
+
+    <h1 class="h1">MAXIMUM</h1>
+    <div class="div-1">
+        7
+    </div>
+    </div>
+    <div class="div-3">
+    <ul>
+    <li> 1-Ulugbek</li>
+   <li> 2-Saidazim </li>
+    <li>3-Asilxan </li>
+   <li> 4-Saidjon </li>
+    <li>5-Sabrina</li>
+    <li>6-Maqsad</li>
+    <li>7-Ziyodshox</li>
+    </ul>
+    </div>
+
+
+    <button class="btn-1" id="result">
+     Choose
+    </button>
+ </section>
+
+<script>
+ const oquvchilar = [
+    "1-Ulugbek" , 
+    "2-Saidazim" ,
+    "3-Asilxan" ,
+    "4-Saidjon" ,
+    "5-Sabrina" ,
+    "6-Maqsad" ,
+    "7-Ziyodshox"
+ ] ;
+
+ const button = document.querySelector(".btn-1");
+ const result = document.getElementById("result");
+
+
+ button.addEventListener("click" , () => {
+    const randomPeople = Math.floor(Math.random() * oquvchilar.length);
+    result.textContent = oquvchilar[randomPeople];
+ } ) ;
+
+</script>
+</body>
+</html>
